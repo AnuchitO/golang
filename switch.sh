@@ -14,7 +14,8 @@ switch_go_version(){
    echo -e $DARK_GRAY"current version:"
    echo -e $ORANGE$OLD
 
-   ln -sfn $GOPATH/bin/$new_version $GOPATH/bin/go
+   # link new go root foler (GOROOT should pointing to here.)
+   ln -sfn $HOME/sdk/$new_version $HOME/sdk/go
 
 
    # print new version
