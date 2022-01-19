@@ -41,7 +41,7 @@ if [ -n "$GO_VERSION" ]; then
     case $input in
       [yY][eE][sS]|[yY])
 
-     `go get -v golang.org/dl/$GO_VERSION`
+     `go install -v golang.org/dl/$GO_VERSION@latest`
 
      if [ $? -ne 0 ]; then
         echo -e $RED"Not found $GO_VERSION on golang.org/dl."
