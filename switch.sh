@@ -1,4 +1,5 @@
 #!/bin/bash
+
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 ORANGE='\033[0;33m'
@@ -32,12 +33,12 @@ switch_go_version(){
 if [ -n "$GO_VERSION" ]; then
 
   # check if go version already download or not.
-  `$GO_VERSION version`
+  $GO_VERSION version
 
   if [ $? -eq 0 ]; then
      switch_go_version $GO_VERSION
   else
-    read -r -p "$ORANGEdo you want to download $GO_VERSION? [Y/n]" input
+    read -r -p "$ORANGEdo you want to download $GO_VERSION? [Y/n] " input
     case $input in
       [yY][eE][sS]|[yY])
 
